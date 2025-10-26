@@ -29,7 +29,7 @@ def main():
     batch_size = 30
     
     for i in range(0, len(test_examples), batch_size):
-        sampling_params = SamplingParams(temperature=0.6, top_p=0.95, max_tokens=16384, seed=seed+i, stop=["\n</think>"])
+        sampling_params = SamplingParams(temperature=0.6, top_p=0.95, max_tokens=17000, seed=seed+i, stop=["\n</think>"])
         end = min(i + batch_size, len(test_examples))  
         batch_examples = test_examples[i:end]
 
